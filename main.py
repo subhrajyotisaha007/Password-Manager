@@ -43,21 +43,13 @@ def pass_gen():
     symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
     number = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 
-    # user_alphabet = random.randint(8,10)
-    # user_symblos = random.randint(2,4)
-    # user_numbers = random.randint(2,4)
 
     password_list = [choice(alphabets) for _ in range(randint(8,10))]
     password_list += [choice(symbols) for _ in range(randint(2,4))]
     password_list += [choice(number) for _ in range(randint(2,4))]
 
     shuffle(password_list)
-    #new_pass = ''
-    # for i in password_list:
-    #     new_pass += i
-    # print(new_pass)
     final_password = ''.join(password_list)
-    # print(final_password)
     password_entry.delete(0,END)
     password_entry.insert(0,final_password)
     pyperclip.copy(final_password)
@@ -87,7 +79,6 @@ def search_site():
 #window
 window = Tk()
 window.title('password manager')
-# window.minsize(width=350,height=400)
 window.config(pady=20,padx=20)
 
 #canvas
