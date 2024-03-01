@@ -128,7 +128,9 @@ add = Button()
 add.config(text='Add',width=36,command=save)
 add.grid(row=5,column=1,columnspan=2,sticky='EW')
 
-
+search = Button()
+search.config(text='search',width=14,command=search_site)
+search.grid(row=2,column=2,sticky='EW')
 
 
 window.mainloop()
